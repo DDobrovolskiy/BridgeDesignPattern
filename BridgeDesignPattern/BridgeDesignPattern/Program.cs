@@ -1,4 +1,6 @@
 ﻿using System;
+using BridgeDesignPattern.ObjectMain;
+using BridgeDesignPattern.BridgeDesign;
 
 namespace BridgeDesignPattern
 {
@@ -6,7 +8,12 @@ namespace BridgeDesignPattern
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Bridge design pattern!");
+            PageBridge Report1 = new PageInPDF();
+            Report1._page = new PageReportFirst();
+            Report1.SavePrintReport();
+
+            Console.ReadKey();
         }
     }
 }
