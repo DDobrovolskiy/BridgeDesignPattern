@@ -6,6 +6,6 @@ namespace BridgeDesignPattern.ObjectMain
 {
     public interface IPage
     {
-        void Print();
+        string GetPage();
     }
 }

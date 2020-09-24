@@ -5,9 +5,9 @@ using System.Text;
 
 namespace BridgeDesignPattern.BridgeDesign
 {
-    public abstract class PageBridge
+    public abstract class SystemPrintPage
     {
         public IPage _page;
-        public abstract void SavePrintReport();
+        public abstract void PrintPage();
     }
 }

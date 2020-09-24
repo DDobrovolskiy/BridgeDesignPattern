@@ -9,9 +9,12 @@ namespace BridgeDesignPattern
         static void Main(string[] args)
         {
             Console.WriteLine("Bridge design pattern!");
-            PageBridge Report1 = new PageInPDF();
-            Report1._page = new PageReportFirst();
-            Report1.SavePrintReport();
+
+            IPage page = new PageReportFirst();
+            SystemPrintPage systemPrint = new PrintInDOC();
+
+            systemPrint._page = page;   //отправка текста
+            systemPrint.PrintPage();    //печать
 
             Console.ReadKey();
         }

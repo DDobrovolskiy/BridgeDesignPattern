@@ -6,9 +6,9 @@ namespace BridgeDesignPattern.ObjectMain
 {
     public class PageReportFirst : IPage
     {
-        public void Print()
+        public string GetPage()
         {
-            Console.WriteLine("Print page Report First");
+            return "Print page Report First";
         }
     }
 }
