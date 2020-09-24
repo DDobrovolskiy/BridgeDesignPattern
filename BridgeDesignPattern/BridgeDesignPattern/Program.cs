@@ -1,6 +1,7 @@
 ﻿using System;
 using BridgeDesignPattern.ObjectMain;
 using BridgeDesignPattern.BridgeDesign;
+using BridgeDesignPattern.ObjectMain.Decorators;
 
 namespace BridgeDesignPattern
 {
@@ -15,6 +16,9 @@ namespace BridgeDesignPattern
 
             systemPrint._page = page;   //отправка текста
             systemPrint.PrintPage();    //печать
+
+            IDecorator page2 = new Decorator(page);
+            page2.TestMethod();
 
             Console.ReadKey();
         }
